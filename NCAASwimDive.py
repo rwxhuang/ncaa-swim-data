@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 st.write("# 2024-25 MIT Men's Swimming and Diving NCAA Times Analysis")
-
+st.write("**Basic Instructions**: Data table and corresponding histogram displayed below. Use the sidebar on left to set parameters. ")
 
 with st.sidebar:
     st.success("Select data to analyze in this sidebar.")
@@ -21,7 +21,7 @@ with st.sidebar:
     event_dist = st.selectbox("Select event distance", df['EVENT_DIST'].unique().tolist())
     event_type = st.selectbox("Select event type", df['EVENT_TYPE'].unique().tolist())
     place1, place2 = st.slider("Final places (1-16):", value=(1, 16), min_value=1, max_value=16)
-    split1, split2 = st.slider("Split ranges places (50-1650):", value=(50, int(event_dist) if event_type != 'Diving' else 50), min_value=50, max_value=1650, step=50)
+    split1, split2 = st.slider("Split ranges (50-1650):", value=(50, int(event_dist) if event_type != 'Diving' else 50), min_value=50, max_value=1650, step=50)
 st.text("Current data table:")
 if year != 'All':
     df = df.query(f'YEAR == {year}')
