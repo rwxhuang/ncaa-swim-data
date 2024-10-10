@@ -11,6 +11,7 @@ st.set_page_config(
 )
 
 st.write("# 2024-25 MIT Men's Swimming and Diving NCAA Times Analysis")
+st.text("Data from the 2022-2024 NCAA D3 Men's Finals (Top 8-16)")
 st.write("**Basic Instructions**: Data table and corresponding histogram displayed below. Use the sidebar on left to set parameters. ")
 
 with st.sidebar:
@@ -52,4 +53,4 @@ fig = px.histogram(
     x=col
     )
 st.plotly_chart(fig)
-st.write(f'Mean: {df[col].mean()}, Std: {df[col].std()}')
+st.write(f'### Mean: {round(df[col].mean(), 2)} sec, Std: {round(df[col].std(), 2)}')
