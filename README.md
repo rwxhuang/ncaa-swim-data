@@ -7,3 +7,11 @@ To install the required packages, you can use pip. First, make sure you have Pyt
 ```bash
 pip install -r requirements.txt
 ```
+
+## Download data
+To download the data into a pandas data frame, do the following in a Python file:
+```python
+df = pd.read_pickle("ncaa_men_swive_results.pkl")
+```
+
+## Application
