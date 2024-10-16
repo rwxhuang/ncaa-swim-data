@@ -15,3 +15,5 @@ df = pd.read_pickle("ncaa_men_swive_results.pkl")
 ```
 
 ## Application
+
+https://ncaa-swive-data.streamlit.app/
